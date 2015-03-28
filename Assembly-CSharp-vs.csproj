@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{702152D3-A833-4D12-7231-2CD5BD3DC9EC}</ProjectGuid>
+	<ProjectGuid>{3B538E45-9E46-B501-CF8E-8D0F8F29B4AD}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -51,7 +51,7 @@
      <Compile Include="Assets\Code\Multiplayer\MultiplayerController.cs" />
      <Compile Include="Assets\Code\Player\AICharacter.cs" />
      <Compile Include="Assets\Code\Player\Character.cs" />
-     <Compile Include="Assets\Code\Player\FireMage.cs" />
+     <Compile Include="Assets\Code\Player\Characters\Pogi.cs" />
      <Compile Include="Assets\Code\Player\InputController.cs" />
      <Compile Include="Assets\Code\Player\PlayerCharacter.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
@@ -76,7 +76,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Althdesk/Documents/IB/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Althdesk/Documents/ProjectEcho/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{99045C37-AD33-2F08-BF23-18A37F3A69EA}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{A1D72142-DE67-47D4-5F99-4A34510310CD}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

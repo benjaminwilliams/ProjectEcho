@@ -4,6 +4,7 @@ using System.Collections;
 public abstract class AICharacter : Character
 {
     private Vector3 movePoint;
+    public bool isMoving;
 
     public override void update()
     {
