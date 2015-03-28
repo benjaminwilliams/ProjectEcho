@@ -48,7 +48,6 @@ public abstract class PlayerCharacter : Character {
 
     public void DisallowMovement(double timeToStop)
     {
-        Debug.Log(movementTimer);
         if (movementTimer == null)
         {
             isMovementAllowed = false;
