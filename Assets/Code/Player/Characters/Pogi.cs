@@ -50,9 +50,13 @@ public class Pogi : PlayerCharacter {
         else 
         {
             Vector3 newPosition = gameObject.transform.position;
-            float distance = Vector3.Distance(gameObject.transform.position, firingPosition);
-            newPosition.x = firingPosition.x + (firingPosition.x - gameObject.transform.position.x) / distance * 3;
-            newPosition.y = firingPosition.y + (firingPosition.y - gameObject.transform.position.y) / distance * 3;
+            newPosition.x = firingPosition.x - gameObject.transform.position.x;
+            newPosition.y = firingPosition.y - gameObject.transform.position.y;
+            float rotation = Mathf.Atan2(newPosition.x, newPosition.y) * 180 / Mathf.PI * -1;
+            rotation = rotation * Mathf.Deg2Rad + Mathf.PI / 2;
+
+            newPosition.x = gameObject.transform.position.x + Mathf.Cos(rotation) * 6;
+            newPosition.y = gameObject.transform.position.y + Mathf.Sin(rotation) * 6;
 
             Debug.DrawLine(gameObject.transform.position, newPosition, Color.green);
             RaycastHit hitObject;
