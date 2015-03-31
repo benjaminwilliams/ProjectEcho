@@ -8,6 +8,7 @@ public class CharacterAbilitySelector : MonoBehaviour
     public GameObject bossPrefab;
     public GameObject pogiPrefab;
     public GameObject ardaPrefab;
+    public GameObject benPrefab;
 
     private bool characterSelected = false;
     private List<Ability> abilityList;
@@ -20,6 +21,10 @@ public class CharacterAbilitySelector : MonoBehaviour
             if (GUI.Button(new Rect(100, 100, 250, 100), "Pogi"))
             {
                 SpawnPlayer(pogiPrefab);
+            }
+            if (GUI.Button(new Rect(100, 100, 250, 100), "Ben"))
+            {
+                SpawnPlayer(benPrefab);
             }
             if (GUI.Button(new Rect(400, 100, 300, 100), "Arda"))
             {
