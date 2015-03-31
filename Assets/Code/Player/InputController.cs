@@ -5,12 +5,7 @@ public class InputController : MonoBehaviour {
     public PlayerCharacter playerCharacter;
 
     public delegate void InputHandler(Vector3 position);
-    
-    //destination point
-    private Vector3 endPoint;
-    
-    
-    // Update is called once per frame
+
 	void Update () {
         if (GetComponent<NetworkView>().isMine)
         {
@@ -59,18 +54,14 @@ public class InputController : MonoBehaviour {
 
     private void CalculatePosition(InputHandler inputFunction)
     {
-        //declare a variable of RaycastHit struct
         RaycastHit hit;
-        //Create a Ray on the tapped / clicked position
         Ray ray;
-        //for unity editor
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        //Check if the ray hits any collider
         if (Physics.Raycast(ray, out hit))
         {
-            //set a flag to indicate to move the gameobject
-            //save the click / tap position
+            Vector3 endPoint;
+
             endPoint = hit.point;
             endPoint.z = -1;
 

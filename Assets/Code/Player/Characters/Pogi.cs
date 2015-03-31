@@ -49,6 +49,16 @@ public class Pogi : PlayerCharacter {
         }
         else 
         {
+            RaycastHit hit;
+            Ray ray;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                firingPosition = Vector3.MoveTowards(firingPosition, hit.point, .1F);
+                firingPosition.z = -1;
+            }
+            
             Vector3 newPosition = gameObject.transform.position;
             newPosition.x = firingPosition.x - gameObject.transform.position.x;
             newPosition.y = firingPosition.y - gameObject.transform.position.y;
