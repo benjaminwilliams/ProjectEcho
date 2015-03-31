@@ -7,7 +7,10 @@ public class Arda : PlayerCharacter {
     public void Start()
     {
         health = 1000;
-        speed = .1F;
+        maxHealth = 1000;
+        speed = .08F;
+        resource = 200;
+        resourceMax = 400;
     }
 
     public Arda()

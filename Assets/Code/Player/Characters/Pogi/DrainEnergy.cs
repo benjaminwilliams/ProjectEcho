@@ -55,7 +55,10 @@ public class DrainEnergy : Ability {
                 {
                     if (hitObject.transform.gameObject != null)
                     {
-                        character.resource += 1;
+                        if (character.resource < character.resourceMax) 
+                        {
+                            character.resource += 1;
+                        }
                         Character boss = hitObject.transform.gameObject.GetComponent<Character>();
                         boss.TakeDamage(1);
                         Debug.Log(character.resource);
