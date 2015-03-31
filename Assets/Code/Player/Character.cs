@@ -6,7 +6,7 @@ public abstract class Character : MonoBehaviour {
     protected int health;
     public float speed;
 
-    virtual public void update()
+    virtual public void Update()
     {
     }
 

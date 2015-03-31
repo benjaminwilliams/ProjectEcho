@@ -48,10 +48,15 @@
   <ItemGroup>
      <Compile Include="Assets\Code\Boss\BossOne.cs" />
      <Compile Include="Assets\Code\Boss\BossOneBullet.cs" />
+     <Compile Include="Assets\Code\Multiplayer\CharacterAbilitySelector.cs" />
      <Compile Include="Assets\Code\Multiplayer\MultiplayerController.cs" />
      <Compile Include="Assets\Code\Player\AICharacter.cs" />
      <Compile Include="Assets\Code\Player\Character.cs" />
+     <Compile Include="Assets\Code\Player\Characters\Ability.cs" />
+     <Compile Include="Assets\Code\Player\Characters\Arda.cs" />
+     <Compile Include="Assets\Code\Player\Characters\Arda\Meditation.cs" />
      <Compile Include="Assets\Code\Player\Characters\Pogi.cs" />
+     <Compile Include="Assets\Code\Player\Characters\Pogi\DrainEnergy.cs" />
      <Compile Include="Assets\Code\Player\InputController.cs" />
      <Compile Include="Assets\Code\Player\PlayerCharacter.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />

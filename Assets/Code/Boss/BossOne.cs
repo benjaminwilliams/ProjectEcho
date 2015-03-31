@@ -12,7 +12,7 @@ public class BossOne : Character {
         shootTimer = Time.time;
     }
 
-    public void Update()
+    public override void Update()
     {
         if (Time.time - shootTimer > 2)
         {

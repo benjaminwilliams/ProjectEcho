@@ -3,10 +3,7 @@ using System.Collections;
 
 public class MultiplayerController : MonoBehaviour
 {
-    public GameObject playerPrefab;
-    public GameObject bossPrefab;
-
-    private GameObject player;
+    public GameObject characterAbilitySelector;
 
     private void StartServer()
     {
@@ -36,7 +33,6 @@ public class MultiplayerController : MonoBehaviour
     void OnServerInitialized()
     {
         SpawnPlayer();
-        SpawnBoss();
     }
 
     void OnConnectedToServer()
@@ -46,12 +42,6 @@ public class MultiplayerController : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        player = (GameObject)Network.Instantiate(playerPrefab, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
-    }
-
-    private void SpawnBoss()
-    {
-        GameObject boss = (GameObject)Network.Instantiate(bossPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity, 0);
-        boss.GetComponent<BossOne>().targetedEnemy = player;
+        Instantiate(characterAbilitySelector);
     }
 }

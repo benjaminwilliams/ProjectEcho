@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class BossOneBullet : AICharacter {
-    public void Update()
+    public override void Update()
     {
-        base.update();
+        base.Update();
         if(!isMoving)
         {
             Network.Destroy(gameObject);
