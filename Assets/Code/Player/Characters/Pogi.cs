@@ -12,6 +12,9 @@ public class Pogi : PlayerCharacter {
     public void Start()
     {
         health = 600;
+        maxHealth = 600;
         speed = .1F;
+        resource = 0;
+        resourceMax = 500;
     }
 }

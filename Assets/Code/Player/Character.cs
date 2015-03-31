@@ -5,6 +5,7 @@ public abstract class Character : MonoBehaviour {
     public enum Direction { Up, Down, Left, Right };
     protected int health;
     public float speed;
+    protected int maxHealth;
 
     virtual public void Update()
     {
@@ -16,6 +17,16 @@ public abstract class Character : MonoBehaviour {
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+        Debug.Log(health);
+    }
+
+    public void HealDamage(int healAmount)
+    {
+        health += healAmount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
         }
         Debug.Log(health);
     }

@@ -11,6 +11,7 @@ public abstract class PlayerCharacter : Character {
     public delegate void UseAbility(Vector3 position);
     protected UseAbility abilityOne;
     public int resource;
+    public int resourceMax;
     protected List<Ability> possibleAbilities;
     protected List<Ability> abilities = new List<Ability>();
     
